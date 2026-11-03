@@ -1,0 +1,15 @@
+name: check-live
+on:
+  push:
+    paths: ['.github/workflows/check-live.yml']
+  workflow_dispatch:
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          for u in "https://gruporl-mx.github.io/itinerarios_2026/" "https://gruporl-mx.github.io/itinerarios_2026/Cotizacion-Orlando-Miami-Nov2026.html" "https://gruporl-mx.github.io/Peru-Magdalena-Garcia/peru-itinerarioV4.html"; do
+            echo "===== $u"
+            curl -sS -L -o /tmp/p.html -D - -w "\nHTTP=%{http_code} SIZE=%{size_download} FINAL=%{url_effective}\n" "$u" | grep -iv '^x-\|^via\|^age\|^date\|^accept-ranges\|^vary' 
+            head -c 400 /tmp/p.html; echo; echo "--- grep:"; grep -o 'Total estimado[^<]*\|\$40,709.89' /tmp/p.html | head -3
+          done
