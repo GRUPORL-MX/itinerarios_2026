@@ -8,8 +8,26 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          for u in "https://gruporl-mx.github.io/itinerarios_2026/" "https://gruporl-mx.github.io/itinerarios_2026/Cotizacion-Orlando-Miami-Nov2026.html" "https://gruporl-mx.github.io/Peru-Magdalena-Garcia/peru-itinerarioV4.html"; do
-            echo "===== $u"
-            curl -sS -L -o /tmp/p.html -D - -w "\nHTTP=%{http_code} SIZE=%{size_download} FINAL=%{url_effective}\n" "$u" | grep -iv '^x-\|^via\|^age\|^date\|^accept-ranges\|^vary' 
-            head -c 400 /tmp/p.html; echo; echo "--- grep:"; grep -o 'Total estimado[^<]*\|\$40,709.89' /tmp/p.html | head -3
-          done
+          npm i playwright@1 >/dev/null 2>&1 && npx playwright install --with-deps chromium webkit >/dev/null 2>&1
+          cat > t.js <<'JS'
+          const pw=require('playwright');
+          (async()=>{
+            for (const n of ['webkit','chromium']) {
+              const b=await pw[n].launch();
+              const ctx=await b.newContext({...pw.devices['iPhone 13']});
+              const p=await ctx.newPage(); const log=[];
+              p.on('pageerror',e=>log.push('PAGEERROR '+e.message));
+              p.on('console',m=>log.push('CONSOLE '+m.type()+' '+m.text()));
+              p.on('requestfailed',r=>log.push('FAILED '+r.url().slice(0,80)+' '+r.failure().errorText));
+              await p.goto('https://gruporl-mx.github.io/itinerarios_2026/Cotizacion-Orlando-Miami-Nov2026.html',{waitUntil:'load'});
+              await p.waitForTimeout(2000);
+              const info=await p.evaluate(()=>({h:document.body.scrollHeight,text:document.body.innerText.slice(0,200),title:document.title}));
+              console.log(n,JSON.stringify(info),log);
+              await p.screenshot({path:n+'.png'});
+              await b.close();
+            }
+          })();
+          JS
+          node t.js
+      - uses: actions/upload-artifact@v4
+        with: {name: shots, path: '*.png'}
