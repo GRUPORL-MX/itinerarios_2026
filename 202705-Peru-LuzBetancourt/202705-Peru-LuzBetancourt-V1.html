@@ -827,8 +827,6 @@
 <nav class="nav">
   <div class="nav-inner">
     <button class="nav-btn active" onclick="show('itinerario', this)">Itinerario</button>
-    <button class="nav-btn" onclick="show('hospedaje', this)">Hospedaje</button>
-    <button class="nav-btn" onclick="show('costos', this)">Tours</button>
     <button class="nav-btn" onclick="show('esencial', this)">Tips</button>
     <button class="nav-btn" onclick="show('tyc', this)">T&C</button>
   </div>
@@ -936,7 +934,6 @@
               <div class="act-name">Tour Lima</div>
               <div class="act-note">Centro histórico, Barranco y Miraflores</div>
             </div>
-            <div class="act-price">$1,000 MXN</div>
           </li>
         </ul>
       </div>
@@ -965,7 +962,6 @@
               <div class="act-name">Tour Paracas</div>
               <div class="act-note">Reserva nacional, fauna marina y desierto costero</div>
             </div>
-            <div class="act-price">$2,000 MXN</div>
           </li>
         </ul>
       </div>
@@ -1004,7 +1000,6 @@
               <div class="act-note">Centro histórico, Plaza de Armas y primeras impresiones</div>
               <span class="alt-badge">▲ 3,400 m</span>
             </div>
-            <div class="act-price">$200 MXN</div>
           </li>
           <li class="act-item">
             <div class="act-dot">
@@ -1042,7 +1037,6 @@
               <div class="act-name">Tour Valle Sagrado</div>
               <div class="act-note">Pisac, Ollantaytambo y mercados andinos</div>
             </div>
-            <div class="act-price">$500 MXN</div>
           </li>
         </ul>
       </div>
@@ -1072,7 +1066,6 @@
               <div class="act-note">Paisaje de colores minerales únicos en el mundo</div>
               <span class="alt-badge">▲ 5,000 m</span>
             </div>
-            <div class="act-price">$1,000 MXN</div>
           </li>
         </ul>
       </div>
@@ -1102,7 +1095,6 @@
               <div class="act-note">Caminata a una de las lagunas más hermosas del Perú</div>
               <span class="alt-badge">▲ 4,200 m</span>
             </div>
-            <div class="act-price">$500 MXN</div>
           </li>
         </ul>
       </div>
@@ -1131,7 +1123,6 @@
               <div class="act-name">Visita Machu Picchu</div>
               <div class="act-note">Reserva con anticipación — cupo limitado</div>
             </div>
-            <div class="act-price">$6,000 MXN</div>
           </li>
         </ul>
       </div>
@@ -1206,128 +1197,9 @@
   </div><!-- /timeline -->
 </section>
 
-<!-- ══ HOSPEDAJE ═════════════════════════ -->
-<section id="hospedaje" class="section">
-  <div class="section-header">
-    <div class="section-label">Dónde dormir</div>
-    <div class="section-title">Tu refugio<br>cada noche</div>
-    <p class="section-sub">3 noches en Lima (9–12 May) y 6 noches en Cusco (12–18 May).</p>
-  </div>
-
-  <div class="hotel-grid">
-
-    <!-- Lima -->
-    <div style="padding: 0 0 4px; margin-bottom: -4px;">
-      <div style="font-size:10px;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:var(--olive);padding:0 2px 6px;">📍 Lima · Dom 9 — Mié 12 May · 3 noches</div>
-    </div>
-
-    <div class="hotel-card recommended">
-      <div class="hotel-badge">✦ Noches 1, 2 y 3 — Lima</div>
-      <div class="hotel-body">
-        <div class="hotel-name">Courtyard by Marriott<br>Lima Miraflores</div>
-        <div class="hotel-stars">★★★★</div>
-        <div class="hotel-perks">
-          <span class="perk-tag">Desayuno incluido</span>
-          <span class="perk-tag">2 camas matrimoniales</span>
-          <span class="perk-tag">Miraflores</span>
-          <span class="perk-tag">4 estrellas</span>
-        </div>
-        <div class="hotel-price">
-          <span class="price-total">$12,200</span>
-          <span class="price-per">MXN total · estimado</span>
-          <span class="price-pp">$6,100/persona</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Cusco -->
-    <div style="padding: 12px 0 4px; margin-bottom: -4px;">
-      <div style="font-size:10px;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:var(--olive);padding:0 2px 6px;">📍 Cusco · Mié 12 — Mar 18 May · 6 noches</div>
-    </div>
-
-    <div class="hotel-card recommended">
-      <div class="hotel-badge">✦ Noches 4 a 9 — Cusco</div>
-      <div class="hotel-body">
-        <div class="hotel-name">Casona Corrales<br>Hotel Boutique</div>
-        <div class="hotel-stars">★★★<span style="font-size:10px;">½</span></div>
-        <div class="hotel-perks">
-          <span class="perk-tag">Desayuno incluido</span>
-          <span class="perk-tag">2 camas matrimoniales</span>
-          <span class="perk-tag">Hotel boutique</span>
-          <span class="perk-tag">3.5 estrellas</span>
-        </div>
-        <div class="hotel-price">
-          <span class="price-total">$23,000</span>
-          <span class="price-per">MXN total · estimado</span>
-          <span class="price-pp">$11,500/persona</span>
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-  <div class="notice" style="margin-top:0">
-    <strong>Tarifas de hospedaje:</strong> precios de referencia; se confirman con disponibilidad y tarifa vigente para mayo 2027.<br><br><strong>Traslados:</strong> Uber es la opción más conveniente para moverse en Lima y Cusco. No está incluido en la cotización — presupuesta unos $200–400 MXN por trayecto entre actividades.
-  </div>
-
-</section>
-
-<!-- ══ COSTOS ════════════════════════════ -->
-<section id="costos" class="section">
-  <div class="section-header">
-    <div class="section-label">Costos tours & actividades</div>
-    <div class="section-title">Tours &<br>Actividades</div>
-    <p style="margin-top:10px;font-size:12px;color:var(--gray-600);">Da click aquí para más información: 👇🏼</p>
-    <a href="https://gruporl-mx.github.io/Peru-Magdalena-Garcia/Peru%CC%81-Gui%CC%81ayActividadesV12026.html" target="_blank" style="display:inline-flex;align-items:center;gap:6px;margin-top:6px;font-size:13px;font-weight:500;color:var(--red-violet);text-decoration:none;border-bottom:1px solid var(--red-violet);padding-bottom:2px;">
-      📋 Guía de Tours y Actividades Detallado
-    </a>
-    <p class="section-sub" style="margin-top:12px;">Precios en pesos mexicanos (MXN) por persona. Tipo de cambio sol peruano: 1 PEN = $5 MXN.</p>
-  </div>
-
-  <div class="costs-wrap">
-
-    <div class="status-bar">
-      <div class="status-dot"></div>
-      <div class="status-text">Cotización activa · Precios sujetos a disponibilidad del día</div>
-    </div>
-
-    <!-- Tours -->
-    <div class="costs-group">
-      <div class="costs-group-title">Tours y actividades</div>
-      <div class="cost-row">
-        <div class="cost-name">City Tour Cusco<span class="cost-note">Por persona</span></div>
-        <div class="cost-pp">$51 USD</div>
-      </div>
-      <div class="cost-row">
-        <div class="cost-name">Laguna de Humantay<span class="cost-note">Por persona</span></div>
-        <div class="cost-pp">$50 USD</div>
-      </div>
-      <div class="cost-row">
-        <div class="cost-name">Montaña 7 Colores — en moto<span class="cost-note">Moto compartida · 2 personas</span></div>
-        <div class="cost-pp">$170 USD</div>
-      </div>
-      <div class="cost-row">
-        <div class="cost-name">Valle Sagrado<span class="cost-note">Por persona</span></div>
-        <div class="cost-pp">$75 USD</div>
-      </div>
-      <div class="cost-row">
-        <div class="cost-name">Machu Picchu<span class="cost-note">Por persona · Proveedor VIPAC Tours</span></div>
-        <div class="cost-pp">$350 USD</div>
-      </div>
-    </div>
-
-    <!-- Total -->
-    <div class="total-bar">
-      <div>
-        <div class="tl">Total estimado</div>
-        <div class="tv">Pendiente</div>
-      </div>
-      <div class="ts">En consolidación<br>de precios finales</div>
-    </div>
 
 
-  </div>
-</section>
+
 
 <!-- ══ TIPS ════════════════════════════ -->
 <section id="esencial" class="section">
