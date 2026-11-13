@@ -828,6 +828,7 @@
   <div class="nav-inner">
     <button class="nav-btn active" onclick="show('itinerario', this)">Itinerario</button>
     <button class="nav-btn" onclick="show('costos', this)">Costos</button>
+    <button class="nav-btn" onclick="show('pagos', this)">Pagos</button>
     <button class="nav-btn" onclick="show('tyc', this)">T&amp;C</button>
   </div>
 </nav>
@@ -1357,6 +1358,54 @@
   </div>
 </section>
 
+<!-- ══ PAGOS ═════════════════════════════ -->
+<section id="pagos" class="section">
+  <div class="section-header">
+    <div class="section-label">Facilidades</div>
+    <div class="section-title">Formas<br>de pago</div>
+    <p class="section-sub">Así puedes ir pagando tu viaje con calma, sin tener que cubrir todo de una sola vez.</p>
+  </div>
+  <style>
+    .pay-wrap { padding: 0 16px 32px; }
+    .pay-card { background:#fff; border-radius:18px; padding:18px 16px 12px; margin-bottom:14px; box-shadow:0 4px 18px rgba(46,40,32,.06); }
+    .pay-head { display:flex; gap:12px; align-items:center; margin-bottom:10px; }
+    .pay-ic { font-size:24px; width:44px; height:44px; border-radius:50%; background:var(--gray-50); display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+    .pay-title { font-family:'Playfair Display',serif; font-size:18px; font-weight:700; color:var(--gray-800); }
+    .pay-tag { font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; font-weight:600; margin-top:2px; }
+    .pay-txt { font-size:13.5px; line-height:1.6; color:var(--gray-600); margin:0 0 10px; }
+    .pay-row { display:flex; justify-content:space-between; gap:12px; font-size:12.5px; padding:8px 0; border-top:1px dashed var(--gray-100); color:var(--gray-600); }
+    .pay-row strong { color:var(--gray-800); text-align:right; }
+    .pay-tl { background:#fff; border-radius:18px; padding:18px 16px 6px; margin:22px 0 14px; box-shadow:0 4px 18px rgba(46,40,32,.06); }
+    .pay-tl-title { font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:var(--red-violet); font-weight:600; margin-bottom:14px; }
+    .pay-step { display:flex; gap:14px; position:relative; padding-bottom:16px; }
+    .pay-step:not(:last-child)::before { content:''; position:absolute; left:6px; top:16px; bottom:0; width:2px; background:var(--gray-100); }
+    .pay-dot { width:14px; height:14px; border-radius:50%; flex-shrink:0; margin-top:2px; box-shadow:0 0 0 4px #fff, 0 0 0 5px var(--gray-100); }
+    .pay-when { font-size:11px; letter-spacing:.1em; text-transform:uppercase; font-weight:700; }
+    .pay-what { font-size:13.5px; color:var(--gray-800); margin-top:2px; }
+  </style>
+  <div class="pay-wrap">
+    <div class="pay-card" style="border-top:4px solid #B5324E;">
+      <div class="pay-head"><span class="pay-ic">🏨</span><div><div class="pay-title">Hotel + boletos Disney</div><div class="pay-tag" style="color:#B5324E;">Apartado y abonos</div></div></div>
+      <p class="pay-txt">Se aparta la tarifa con un <strong>pago inicial de US$200</strong>. Después vas abonando cuando quieras y en las cantidades que quieras.</p>
+      <div class="pay-row"><span>Anticipo para apartar</span><strong>US$200</strong></div><div class="pay-row"><span>Abonos</span><strong>Libres, a tu ritmo</strong></div><div class="pay-row"><span>Fecha límite para liquidar</span><strong>22 jul 2027 · 30 días antes</strong></div>
+    </div>
+    <div class="pay-card" style="border-top:4px solid #7E9361;">
+      <div class="pay-head"><span class="pay-ic">🎢</span><div><div class="pay-title">Boletos Universal</div><div class="pay-tag" style="color:#7E9361;">Pago de contado</div></div></div>
+      <p class="pay-txt">Los boletos de Universal se pagan <strong>de contado</strong>. No se agotan, así que no hay prisa: se pueden comprar con calma antes de mayo/junio 2027.</p>
+      <div class="pay-row"><span>Forma de pago</span><strong>Contado</strong></div><div class="pay-row"><span>Compra recomendada</span><strong>Antes de mayo/junio 2027</strong></div><div class="pay-row"><span>Monto (2 personas)</span><strong>$15,241.00 MXN</strong></div>
+    </div>
+    <div class="pay-card" style="border-top:4px solid #5C544C;">
+      <div class="pay-head"><span class="pay-ic">✈️</span><div><div class="pay-title">Vuelos</div><div class="pay-tag" style="color:#5C544C;">Posibilidad de MSI</div></div></div>
+      <p class="pay-txt">Dependiendo de dónde se compren, los vuelos <strong>se pueden pagar a meses sin intereses</strong>. Te ayudamos a encontrar la mejor opción.</p>
+      <div class="pay-row"><span>Forma de pago</span><strong>Contado o MSI</strong></div><div class="pay-row"><span>Precio estimado</span><strong>$8,000 – $12,000 MXN por persona</strong></div>
+    </div>
+    <div class="pay-tl">
+      <div class="pay-tl-title">Calendario sugerido de pagos</div>
+      <div class="pay-step"><span class="pay-dot" style="background:#B5324E;"></span><div><div class="pay-when" style="color:#B5324E;">Al confirmar</div><div class="pay-what">Anticipo de US$200 para apartar hotel + boletos Disney</div></div></div><div class="pay-step"><span class="pay-dot" style="background:#C9556A;"></span><div><div class="pay-when" style="color:#C9556A;">Cuando quieras</div><div class="pay-what">Abonos libres al paquete Disney</div></div></div><div class="pay-step"><span class="pay-dot" style="background:#5C544C;"></span><div><div class="pay-when" style="color:#5C544C;">Cuando se decida</div><div class="pay-what">Compra de vuelos · contado o MSI</div></div></div><div class="pay-step"><span class="pay-dot" style="background:#7E9361;"></span><div><div class="pay-when" style="color:#7E9361;">Antes de mayo/junio 2027</div><div class="pay-what">Boletos Universal · de contado</div></div></div><div class="pay-step"><span class="pay-dot" style="background:#B5324E;"></span><div><div class="pay-when" style="color:#B5324E;">22 de julio 2027</div><div class="pay-what">Liquidar hotel + boletos Disney</div></div></div><div class="pay-step"><span class="pay-dot" style="background:#C9A24A;"></span><div><div class="pay-when" style="color:#C9A24A;">21 de agosto 2027</div><div class="pay-what">¡A Orlando! ✨</div></div></div>
+    </div>
+  </div>
+</section>
+
 <!-- ══ T&C ═══════════════════════════════ -->
 <section id="tyc" class="section">
   <div class="section-header">
@@ -1417,7 +1466,7 @@
 <!-- ══ FOOTER ════════════════════════════ -->
 <footer class="footer">
   <strong style="color:#ffffff;">Orlando Florida · Karla Carreon</strong>
-  <span style="color:#ffffff;">Disney &amp; Universal · Ago 21–29, 2027</span>
+  <span style="color:#ffffff;display:block;">Disney &amp; Universal · Ago 21–29, 2027</span>
   <span style="color:#ffffff;">9 días · 4 parques Disney, 1 día de descanso y 2 días Universal</span>
   <div class="footer-vv"><em style="color:#ffffff;font-size:12px;font-weight:400;font-style:italic;">Venimos a Vivir</em></div>
 </footer>
