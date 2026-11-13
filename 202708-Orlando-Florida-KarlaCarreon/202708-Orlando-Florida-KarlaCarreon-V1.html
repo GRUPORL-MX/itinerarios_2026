@@ -1382,6 +1382,12 @@
     .pay-dot { width:14px; height:14px; border-radius:50%; flex-shrink:0; margin-top:2px; box-shadow:0 0 0 4px #fff, 0 0 0 5px var(--gray-100); }
     .pay-when { font-size:11px; letter-spacing:.1em; text-transform:uppercase; font-weight:700; }
     .pay-what { font-size:13.5px; color:var(--gray-800); margin-top:2px; }
+    .pay-notes { background:#fff; border-radius:18px; padding:18px 16px 8px; margin:0 0 14px; box-shadow:0 4px 18px rgba(46,40,32,.06); }
+    .pay-note { display:flex; gap:12px; padding:10px 0; border-top:1px dashed var(--gray-100); }
+    .pay-note:first-of-type { border-top:none; }
+    .pay-note-ic { font-size:18px; width:32px; flex-shrink:0; text-align:center; }
+    .pay-note-t { font-size:13.5px; font-weight:700; color:var(--gray-800); }
+    .pay-note-d { font-size:12.5px; line-height:1.55; color:var(--gray-600); margin-top:2px; }
   </style>
   <div class="pay-wrap">
     <div class="pay-card" style="border-top:4px solid #B5324E;">
@@ -1399,9 +1405,17 @@
       <p class="pay-txt">Dependiendo de dónde se compren, los vuelos <strong>se pueden pagar a meses sin intereses</strong>. Te ayudamos a encontrar la mejor opción.</p>
       <div class="pay-row"><span>Forma de pago</span><strong>Contado o MSI</strong></div><div class="pay-row"><span>Precio estimado</span><strong>$8,000 – $12,000 MXN por persona</strong></div>
     </div>
+    <div class="pay-notes">
+      <div class="pay-tl-title">Puntos importantes</div>
+      <div class="pay-note"><span class="pay-note-ic">📲</span><div><div class="pay-note-t">Seguimiento de tus pagos</div><div class="pay-note-d">Venimos a Vivir Travel Agency será responsable de ir subiendo en este link la actualización de cada pago realizado.</div></div></div>
+      <div class="pay-note"><span class="pay-note-ic">🎢</span><div><div class="pay-note-t">Boletos Universal</div><div class="pay-note-d">No son reembolsables y no permiten cambio de fechas.</div></div></div>
+      <div class="pay-note"><span class="pay-note-ic">🏰</span><div><div class="pay-note-t">Boletos Disney</div><div class="pay-note-d">Se pueden cambiar de fecha, con una multa de US$50 cada vez que se muevan.</div></div></div>
+      <div class="pay-note"><span class="pay-note-ic">🎉</span><div><div class="pay-note-t">Promociones</div><div class="pay-note-d">Si sale alguna promoción, nos comunicaremos contigo, la aplicaremos y la actualizaremos en el sistema para reducir el costo total de tu viaje.</div></div></div>
+      <div class="pay-note"><span class="pay-note-ic">⚡</span><div><div class="pay-note-t">Lightning Lane no incluido</div><div class="pay-note-d">Los Lightning Lanes no están incluidos en el paquete. Compartiremos la información y opciones 60 días antes del viaje.</div></div></div>
+    </div>
     <div class="pay-tl">
       <div class="pay-tl-title">Calendario sugerido de pagos</div>
-      <div class="pay-step"><span class="pay-dot" style="background:#B5324E;"></span><div><div class="pay-when" style="color:#B5324E;">Al confirmar</div><div class="pay-what">Anticipo de US$200 para apartar hotel + boletos Disney</div></div></div><div class="pay-step"><span class="pay-dot" style="background:#C9556A;"></span><div><div class="pay-when" style="color:#C9556A;">Cuando quieras</div><div class="pay-what">Abonos libres al paquete Disney</div></div></div><div class="pay-step"><span class="pay-dot" style="background:#5C544C;"></span><div><div class="pay-when" style="color:#5C544C;">Cuando se decida</div><div class="pay-what">Compra de vuelos · contado o MSI</div></div></div><div class="pay-step"><span class="pay-dot" style="background:#7E9361;"></span><div><div class="pay-when" style="color:#7E9361;">Antes de mayo/junio 2027</div><div class="pay-what">Boletos Universal · de contado</div></div></div><div class="pay-step"><span class="pay-dot" style="background:#B5324E;"></span><div><div class="pay-when" style="color:#B5324E;">22 de julio 2027</div><div class="pay-what">Liquidar hotel + boletos Disney</div></div></div><div class="pay-step"><span class="pay-dot" style="background:#C9A24A;"></span><div><div class="pay-when" style="color:#C9A24A;">21 de agosto 2027</div><div class="pay-what">¡A Orlando! ✨</div></div></div>
+      <div class="pay-step"><span class="pay-dot" style="background:#B5324E;"></span><div><div class="pay-when" style="color:#B5324E;">Al confirmar</div><div class="pay-what">Anticipo de US$200 para apartar hotel + boletos Disney</div></div></div><div class="pay-step"><span class="pay-dot" style="background:#C9556A;"></span><div><div class="pay-when" style="color:#C9556A;">Cuando quieras</div><div class="pay-what">Abonos libres al paquete Disney</div></div></div><div class="pay-step"><span class="pay-dot" style="background:#5C544C;"></span><div><div class="pay-when" style="color:#5C544C;">Cuando se decida</div><div class="pay-what">Compra de vuelos · contado o MSI</div></div></div><div class="pay-step"><span class="pay-dot" style="background:#7E9361;"></span><div><div class="pay-when" style="color:#7E9361;">Antes de mayo/junio 2027</div><div class="pay-what">Boletos Universal · de contado</div></div></div><div class="pay-step"><span class="pay-dot" style="background:#C9556A;"></span><div><div class="pay-when" style="color:#C9556A;">22 de junio 2027</div><div class="pay-what">Te compartimos la información de Lightning Lane · 60 días antes</div></div></div><div class="pay-step"><span class="pay-dot" style="background:#B5324E;"></span><div><div class="pay-when" style="color:#B5324E;">22 de julio 2027</div><div class="pay-what">Liquidar hotel + boletos Disney</div></div></div><div class="pay-step"><span class="pay-dot" style="background:#C9A24A;"></span><div><div class="pay-when" style="color:#C9A24A;">21 de agosto 2027</div><div class="pay-what">¡A Orlando! ✨</div></div></div>
     </div>
   </div>
 </section>
@@ -1452,8 +1466,8 @@
     </div>
     <div class="tyc-item">
       <div class="tyc-num">08 · Boletos de parques</div>
-      <div class="tyc-title">Fechados y no reembolsables</div>
-      <div class="tyc-text">Los boletos de Disney y Universal son para fechas específicas y se rigen por las políticas de cambio y reembolso de cada parque. Los horarios y atracciones pueden cambiar por mantenimiento o clima.</div>
+      <div class="tyc-title">Políticas de cambio</div>
+      <div class="tyc-text">Los boletos de Universal no son reembolsables ni permiten cambio de fechas. Los boletos de Disney se pueden cambiar de fecha con una multa de US$50 por cada cambio. Los Lightning Lanes no están incluidos; su información se compartirá 60 días antes del viaje. Los horarios y atracciones pueden cambiar por mantenimiento o clima.</div>
     </div>
     <div class="tyc-item">
       <div class="tyc-num">09 · No uso de servicios</div>
