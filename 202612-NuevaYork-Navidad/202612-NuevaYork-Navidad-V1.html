@@ -817,6 +817,10 @@
 
 <nav class="nav"><div class="nav-inner">
   <button class="nav-btn active" onclick="show('costos', this)">Costos</button>
+  <button class="nav-btn" onclick="show('vuelos', this)">Vuelos</button>
+  <button class="nav-btn" onclick="show('hotel', this)">Hotel</button>
+  <button class="nav-btn" onclick="show('info', this)">Info</button>
+  <button class="nav-btn" onclick="show('tyc', this)">T&amp;C</button>
 </div></nav>
 
 <section id="costos" class="section active">
@@ -833,7 +837,7 @@
     </div>
     <div class="costs-group">
       <div class="costs-group-title">Vuelos · Aeroméxico Clásica</div>
-      <div class="cost-row"><div class="cost-name">Tarifa aérea<span class="cost-note">$16,842.70 por persona<br>Ida lun 21 dic · 08:00 CDMX → 23:00 JFK (escala GDL)<br>Regreso sáb 2 ene · 07:01 Newark (EWR) → 11:50 CDMX, directo</span></div><div class="cost-pp">$33,685.40</div></div>
+      <div class="cost-row"><div class="cost-name">Tarifa aérea<span class="cost-note">$16,842.70 por persona</span></div><div class="cost-pp">$33,685.40</div></div>
       <div class="cost-row"><div class="cost-name">TUA<span class="cost-note">$1,239.93 por persona</span></div><div class="cost-pp">$2,479.86</div></div>
       <div class="cost-row" style="background:var(--gray-50);"><div class="cost-name" style="font-weight:600;">Subtotal vuelos<span class="cost-note">$18,082.63 por persona</span></div><div class="cost-pp" style="font-weight:700;">$36,165.26</div></div>
     </div>
@@ -849,6 +853,87 @@
       <div class="cost-row" style="background:var(--gray-50);"><div class="cost-name" style="font-weight:700;">Total</div><div class="cost-pp" style="font-weight:700;">$111,646.26 MXN</div></div>
     </div>
     <div class="notice" style="margin:16px 0 0;"><strong>🚫 No incluido:</strong> traslados aeropuerto ⇄ hotel, entradas a miradores, museos, ferry y Broadway, comidas y cenas, propinas, impuestos o cargos locales que cobre el hotel en destino y seguro de viaje.</div>
+  </div>
+</section>
+
+<section id="vuelos" class="section">
+  <div class="section-header">
+    <div class="section-label">Aeroméxico · Clásica</div>
+    <div class="section-title">Vuelos<br>redondos</div>
+    <p class="section-sub">Tarifa Clásica, Cabina Main, para 2 pasajeros.</p>
+  </div>
+  <div class="costs-wrap">
+    <div class="costs-group">
+      <div class="costs-group-title">Ida · Lunes 21 de diciembre</div>
+      <div class="cost-row" style="flex-direction:column;align-items:stretch;gap:8px;padding:14px;"><div style="display:flex;justify-content:space-between;align-items:flex-start;gap:8px;"><div class="cost-name" style="font-weight:600;font-size:14px;">CDMX → Nueva York (JFK)</div><span class="chip chip-red">1 escala</span></div><div style="border-top:1px dashed var(--gray-100);padding-top:6px;"><div style="display:flex;justify-content:space-between;gap:14px;font-size:12px;color:var(--gray-600);padding:2px 0;"><span style="flex-shrink:0;">Vuelos</span><span style="text-align:right;">AM 208 · AM 296</span></div><div style="display:flex;justify-content:space-between;gap:14px;font-size:12px;color:var(--gray-600);padding:2px 0;"><span style="flex-shrink:0;">Salida</span><span style="text-align:right;">08:00 · CDMX Terminal 2</span></div><div style="display:flex;justify-content:space-between;gap:14px;font-size:12px;color:var(--gray-600);padding:2px 0;"><span style="flex-shrink:0;">Escala</span><span style="text-align:right;">Guadalajara · 7 h 24 min</span></div><div style="display:flex;justify-content:space-between;gap:14px;font-size:12px;color:var(--gray-600);padding:2px 0;"><span style="flex-shrink:0;">Llegada</span><span style="text-align:right;">23:00 · JFK Terminal 4</span></div><div style="display:flex;justify-content:space-between;gap:14px;font-size:12px;color:var(--gray-600);padding:2px 0;"><span style="flex-shrink:0;">Duración total</span><span style="text-align:right;">14 h</span></div></div></div>
+    </div>
+    <div class="costs-group">
+      <div class="costs-group-title">Regreso · Sábado 2 de enero</div>
+      <div class="cost-row" style="flex-direction:column;align-items:stretch;gap:8px;padding:14px;"><div style="display:flex;justify-content:space-between;align-items:flex-start;gap:8px;"><div class="cost-name" style="font-weight:600;font-size:14px;">Nueva York (EWR) → CDMX</div><span class="chip chip-red">Directo</span></div><div style="border-top:1px dashed var(--gray-100);padding-top:6px;"><div style="display:flex;justify-content:space-between;gap:14px;font-size:12px;color:var(--gray-600);padding:2px 0;"><span style="flex-shrink:0;">Vuelo</span><span style="text-align:right;">AM 411</span></div><div style="display:flex;justify-content:space-between;gap:14px;font-size:12px;color:var(--gray-600);padding:2px 0;"><span style="flex-shrink:0;">Salida</span><span style="text-align:right;">07:01 · Newark Terminal B</span></div><div style="display:flex;justify-content:space-between;gap:14px;font-size:12px;color:var(--gray-600);padding:2px 0;"><span style="flex-shrink:0;">Llegada</span><span style="text-align:right;">11:50 · CDMX Terminal 2</span></div><div style="display:flex;justify-content:space-between;gap:14px;font-size:12px;color:var(--gray-600);padding:2px 0;"><span style="flex-shrink:0;">Duración</span><span style="text-align:right;">5 h 49 min</span></div></div></div>
+    </div>
+    <div class="costs-group">
+      <div class="costs-group-title">Tarifa Clásica incluye</div>
+      <div class="cost-row"><div class="cost-name">Equipaje de mano + maleta documentada</div></div>
+      <div class="cost-row"><div class="cost-name">Asientos del viaje</div><div class="cost-pp">Incluido</div></div>
+      <div class="cost-row"><div class="cost-name">Puntos Aeroméxico Rewards<span class="cost-note">Por pasajero</span></div><div class="cost-pp">6,136</div></div>
+    </div>
+    <div class="notice" style="margin:0;"><strong>Importante:</strong> llegan al aeropuerto JFK pero regresan desde <strong>Newark (EWR)</strong>, en Nueva Jersey. Son aeropuertos distintos; el día del regreso hay que salir del hotel alrededor de las 4:00 am.</div>
+  </div>
+</section>
+
+<section id="hotel" class="section">
+  <div class="section-header">
+    <div class="section-label">Hospedaje</div>
+    <div class="section-title">Tu hotel<br>en Manhattan</div>
+    <p class="section-sub">12 noches cerca de Central Park, con desayuno incluido.</p>
+  </div>
+  <div class="hotel-grid">
+    <div class="hotel-card recommended">
+      <div class="hotel-badge">100% reembolsable</div>
+      <div class="hotel-body">
+        <div class="hotel-name">La Quinta Inn &amp; Suites by Wyndham New York City Central Park</div>
+        <div class="hotel-perks"><span class="perk-tag">12 noches</span><span class="perk-tag">Desayuno incluido</span><span class="perk-tag">2 personas</span><span class="perk-tag">Cerca de Central Park</span></div>
+        <div style="border-top:1px dashed var(--gray-100);padding-top:6px;"><div style="display:flex;justify-content:space-between;gap:14px;font-size:12px;color:var(--gray-600);padding:2px 0;"><span style="flex-shrink:0;">Check-in</span><span style="text-align:right;">Lun 21 Dic · llegada nocturna</span></div><div style="display:flex;justify-content:space-between;gap:14px;font-size:12px;color:var(--gray-600);padding:2px 0;"><span style="flex-shrink:0;">Check-out</span><span style="text-align:right;">Sáb 2 Ene · madrugada</span></div><div style="display:flex;justify-content:space-between;gap:14px;font-size:12px;color:var(--gray-600);padding:2px 0;"><span style="flex-shrink:0;">Cancelación</span><span style="text-align:right;">Reembolso total antes del dom. 20 dic.</span></div><div style="display:flex;justify-content:space-between;gap:14px;font-size:12px;color:var(--gray-600);padding:2px 0;"><span style="flex-shrink:0;"><a href="https://www.google.com/maps/search/?api=1&query=La+Quinta+Inn+%26+Suites+by+Wyndham+New+York+City+Central+Park" target="_blank" style="font-size:12px;font-weight:500;color:var(--red-violet);text-decoration:none;border-bottom:1px solid var(--red-violet);">📍 Ver en Google Maps</a></span><span style="text-align:right;"></span></div></div>
+        <div class="hotel-price"><span class="price-total">$75,481 MXN</span><span class="price-per">12 noches</span><span class="price-pp">$37,740.50 p/p</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="notice">Como el vuelo llega a las 23:00, avisaremos al hotel que el check-in será tarde para que la habitación quede garantizada.</div>
+</section>
+
+<section id="info" class="section">
+  <div class="section-header">
+    <div class="section-label">Antes de viajar</div>
+    <div class="section-title">Información<br>útil</div>
+  </div>
+  <div class="info-wrap">
+    <div class="info-block"><div class="info-block-title"><div class="icon"><svg viewBox="0 0 14 14"><circle cx="7" cy="7" r="4" fill="currentColor"/></svg></div><span>Clima en diciembre–enero</span></div>
+      <div class="temp-row"><div class="temp-label">Máxima promedio</div><div><div class="temp-val">4–6 °C</div></div></div>
+      <div class="temp-row"><div class="temp-label">Mínima promedio</div><div><div class="temp-val">-3–0 °C</div></div></div>
+      <div class="temp-row"><div class="temp-label">Posibilidad de nieve</div><div class="temp-range">Sí, sobre todo desde finales de diciembre</div></div>
+    </div>
+    <div class="info-block"><div class="info-block-title"><div class="icon"><svg viewBox="0 0 14 14"><circle cx="7" cy="7" r="4" fill="currentColor"/></svg></div><span>Documentos</span></div><ul class="info-list"><li>Pasaporte mexicano vigente</li><li>Visa americana vigente</li><li>Copia digital de pasaporte y reservaciones</li></ul></div>
+    <div class="info-block"><div class="info-block-title"><div class="icon"><svg viewBox="0 0 14 14"><circle cx="7" cy="7" r="4" fill="currentColor"/></svg></div><span>Qué empacar</span></div><ul class="info-list"><li>Abrigo térmico o de plumas, impermeable al viento</li><li>Gorro, guantes y bufanda</li><li>Botas cómodas e impermeables para caminar mucho</li><li>Ropa térmica para la noche del 31 si van a Times Square</li></ul></div>
+    <div class="info-block"><div class="info-block-title"><div class="icon"><svg viewBox="0 0 14 14"><circle cx="7" cy="7" r="4" fill="currentColor"/></svg></div><span>Tips de la ciudad</span></div><ul class="info-list"><li>Metro: se paga con OMNY acercando tarjeta bancaria o celular al torniquete</li><li>El 25 de diciembre y el 1 de enero muchos lugares cierran o abren con horario reducido</li><li>Las propinas en restaurantes son de 18–22% de la cuenta</li><li>Reservar con anticipación miradores, ferry de la Estatua de la Libertad, Broadway y cenas del 24 y 31</li></ul></div>
+  </div>
+</section>
+
+<section id="tyc" class="section">
+  <div class="section-header">
+    <div class="section-label">Transparencia</div>
+    <div class="section-title">Términos &amp;<br>Condiciones</div>
+    <p class="section-sub">Todo lo que debes saber sobre esta cotización antes de confirmar tu viaje.</p>
+  </div>
+  <div class="tyc-wrap">
+    <div class="tyc-item"><div class="tyc-num">01 · Vigencia</div><div class="tyc-title">Tarifas del día</div><div class="tyc-text">Los precios de vuelo y hotel tienen vigencia únicamente el día de su emisión. Por ser temporada alta (Navidad y Año Nuevo), las tarifas pueden subir o agotarse rápidamente.</div></div>
+    <div class="tyc-item"><div class="tyc-num">02 · Disponibilidad</div><div class="tyc-title">Sujeto a confirmación</div><div class="tyc-text">Vuelos y hospedaje están sujetos a disponibilidad al momento de la reservación y el pago.</div></div>
+    <div class="tyc-item"><div class="tyc-num">03 · Hotel</div><div class="tyc-title">100% reembolsable</div><div class="tyc-text">La tarifa del hotel es totalmente reembolsable si se cancela antes del domingo 20 de diciembre. Después de esa fecha aplican las políticas del hotel.</div></div>
+    <div class="tyc-item"><div class="tyc-num">04 · Vuelos</div><div class="tyc-title">Políticas de Aeroméxico</div><div class="tyc-text">Los cambios y cancelaciones del boleto se rigen por las condiciones de la tarifa Clásica de Aeroméxico y pueden generar cargos y diferencia de tarifa.</div></div>
+    <div class="tyc-item"><div class="tyc-num">05 · Confirmación</div><div class="tyc-title">Reserva oficial</div><div class="tyc-text">La reservación se confirma únicamente con el pago recibido y la confirmación oficial enviada por la agencia.</div></div>
+    <div class="tyc-item"><div class="tyc-num">06 · Cambios</div><div class="tyc-title">Hasta 2 cambios gratis</div><div class="tyc-text">Dos modificaciones a la cotización sin costo. A partir del tercero: cargo de $500 MXN / $25 USD por cambio.</div></div>
+    <div class="tyc-item"><div class="tyc-num">07 · Documentación</div><div class="tyc-title">Responsabilidad del pasajero</div><div class="tyc-text">Es responsabilidad del cliente contar con pasaporte y visa americana vigentes para el viaje.</div></div>
+    <div class="tyc-item"><div class="tyc-num">08 · Seguro de viaje</div><div class="tyc-title">No incluido — se recomienda</div><div class="tyc-text">El seguro no está incluido en esta cotización. La agencia recomienda contratarlo para contar con asistencia durante el viaje.</div></div>
+    <div class="tyc-item"><div class="tyc-num">09 · No uso de servicios</div><div class="tyc-title">Sin reembolso voluntario</div><div class="tyc-text">No habrá reembolso por servicios no utilizados voluntariamente por el pasajero durante el viaje.</div></div>
   </div>
 </section>
 
